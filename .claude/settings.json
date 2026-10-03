@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/new_project.py:*)",
+      "Bash(python3 scripts/niche_scorer.py:*)",
+      "Bash(python3 scripts/city_finder.py:*)",
+      "Bash(python3 scripts/keyword_tool.py:*)",
+      "Bash(python3 scripts/serp_audit.py:*)",
+      "Bash(python3 scripts/lead_economics.py:*)",
+      "Bash(python3 scripts/build_site.py:*)",
+      "Bash(python3 scripts/qa_site.py:*)",
+      "Bash(python3 scripts/portfolio.py:*)",
+      "Bash(python3 scripts/fetch_census_data.py:*)",
+      "Bash(python3 -m unittest:*)",
+      "WebSearch",
+      "WebFetch"
+    ]
+  }
+}

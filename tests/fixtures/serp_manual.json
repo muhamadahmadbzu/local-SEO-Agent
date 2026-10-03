@@ -1,0 +1,9 @@
+{"keyword": "tree removal exampleville", "location": "Exampleville, OK", "date": "2026-10-01",
+ "features": {"ads_top": 2, "lsa": false, "local_pack": true, "ai_overview": true},
+ "local_pack": [{"name": "A", "rating": 4.7, "reviews": 410, "website": "a.example"}, {"name": "B", "rating": 4.9, "reviews": 900, "website": ""}, {"name": "C", "rating": 4.5, "reviews": 350, "website": "c.example"}],
+ "organic": [
+  {"position": 1, "url": "https://a.example/tree-removal-exampleville", "title": "Tree Removal Exampleville | A", "type": "auto", "dr": 22},
+  {"position": 2, "url": "https://c.example/", "title": "Tree Removal in Exampleville, OK", "type": "auto", "dr": 18},
+  {"position": 3, "url": "https://www.bartlett.com/x", "title": "Bartlett Tree Experts", "type": "auto", "dr": 60},
+  {"position": 4, "url": "https://d.example/", "title": "Exampleville Tree Removal Experts", "type": "lead_gen", "dr": 9}
+ ]}
