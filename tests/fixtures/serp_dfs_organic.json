@@ -1,0 +1,17 @@
+{"version": "0.1", "status_code": 20000, "status_message": "Ok.", "tasks": [{"id": "x", "status_code": 20000, "status_message": "Ok.", "result": [{"keyword": "tree service exampleville", "type": "organic", "location_code": 1000000, "language_code": "en", "datetime": "2026-10-01 10:00:00 +00:00", "item_types": ["paid", "local_services", "local_pack", "organic"], "items": [
+ {"type": "paid", "rank_group": 1, "rank_absolute": 1, "domain": "ads.example.com"},
+ {"type": "local_services", "rank_group": 1, "rank_absolute": 2, "items": []},
+ {"type": "local_pack", "rank_group": 1, "rank_absolute": 3, "title": "Acme Tree Co", "domain": "acmetree.example", "rating": {"rating_type": "Max5", "value": 4.8, "votes_count": 64}},
+ {"type": "local_pack", "rank_group": 2, "rank_absolute": 4, "title": "Oak Bros", "domain": "", "rating": {"rating_type": "Max5", "value": 4.6, "votes_count": 21}},
+ {"type": "local_pack", "rank_group": 3, "rank_absolute": 5, "title": "Limb Pros", "domain": "limbpros.example", "rating": {"rating_type": "Max5", "value": 4.9, "votes_count": 140}},
+ {"type": "organic", "rank_group": 1, "rank_absolute": 6, "domain": "www.yelp.com", "url": "https://www.yelp.com/search?find_desc=tree+service&find_loc=Exampleville", "title": "THE BEST 10 Tree Services in Exampleville"},
+ {"type": "organic", "rank_group": 2, "rank_absolute": 7, "domain": "www.angi.com", "url": "https://www.angi.com/companylist/us/xx/exampleville/tree-service.htm", "title": "Tree Service Exampleville"},
+ {"type": "organic", "rank_group": 3, "rank_absolute": 8, "domain": "acmetree.example", "url": "https://acmetree.example/", "title": "Acme Tree Co | Tree Service in Exampleville"},
+ {"type": "organic", "rank_group": 4, "rank_absolute": 9, "domain": "www.facebook.com", "url": "https://www.facebook.com/oakbros", "title": "Oak Bros Tree"},
+ {"type": "organic", "rank_group": 5, "rank_absolute": 10, "domain": "www.thumbtack.com", "url": "https://www.thumbtack.com/xx/exampleville/tree-removal/", "title": "Top 10 Tree Removal Services"},
+ {"type": "organic", "rank_group": 6, "rank_absolute": 11, "domain": "www.davey.com", "url": "https://www.davey.com/local/exampleville", "title": "Davey Tree"},
+ {"type": "organic", "rank_group": 7, "rank_absolute": 12, "domain": "limbpros.example", "url": "https://limbpros.example/", "title": "Limb Pros"},
+ {"type": "organic", "rank_group": 8, "rank_absolute": 13, "domain": "www.bbb.org", "url": "https://www.bbb.org/search?x", "title": "Tree Service near Exampleville | BBB"},
+ {"type": "organic", "rank_group": 9, "rank_absolute": 14, "domain": "www.reddit.com", "url": "https://www.reddit.com/r/exampleville/x", "title": "Anyone recommend a tree guy?"},
+ {"type": "organic", "rank_group": 10, "rank_absolute": 15, "domain": "www.exampleville.gov", "url": "https://www.exampleville.gov/trees", "title": "Urban Forestry"}
+]}]}]}

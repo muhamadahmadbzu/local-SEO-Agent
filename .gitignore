@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+
+# build output (rebuild with scripts/build_site.py)
+projects/*/dist/
+examples/*/dist/
+
+# cached downloads (Census, DataForSEO raw responses)
+data/raw/
+projects/*/data/raw/

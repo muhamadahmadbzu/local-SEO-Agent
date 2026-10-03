@@ -1,0 +1,5564 @@
+{
+  "_meta": {
+    "version": "2026.10.1",
+    "last_reviewed": "2026-10-03",
+    "description": "Prior knowledge base of US local-service and pay-per-call niches for triage. Every number is an INDICATIVE PRIOR to rank/compare niches - NOT validated data. Phase 3-5 (keyword, SERP, economics) must replace priors with live data before any GO decision.",
+    "fields": {
+      "model_fit": "0-10 fit for each monetization model: rank_and_rent (rent a local site), pay_per_call (local calls sold via networks/buyers), nationwide (one brand/site monetized across many states via networks)",
+      "ticket_usd": "Typical customer job value range. 0,0 = not a job-ticket business (insurance/finance) -> use ppc_payout_usd",
+      "urgency": "emergency | mixed | planned - emergency niches produce more phone calls and higher payouts",
+      "seasonality": "year_round | seasonal | highly_seasonal",
+      "demand_tier": "Relative local search demand for the core service cluster. See demand_tiers for order-of-magnitude priors",
+      "lsa_presence": "Likelihood of Google Local Services Ads above organic results (reduces organic CTR, but proves buyers pay for leads)",
+      "directory_pressure": "How much directories/aggregators (Angi, Yelp, Thumbtack, national brokers) occupy organic results",
+      "competition_baseline": "Typical organic difficulty in a mid-size US city before any SERP audit",
+      "ppc_payout_usd": "Indicative pay-per-call payout per qualified call (varies hugely by ZIP, buyer, hour, buffer). null = little/no network demand",
+      "call_buffer_sec": "Typical minimum call duration for a call to be billable",
+      "rent_usd_month": "Indicative monthly rent a single tenant pays for a ranking site producing steady leads. null = not a rental niche",
+      "per_lead_usd": "Indicative price per qualified exclusive lead/call when selling per lead to a local buyer",
+      "buyer_density": "How many potential tenants/buyers exist per market",
+      "license_sensitivity": "How much contractor/professional licensing affects what the site may claim/advertise",
+      "regulatory_risk": "low | medium | high | extreme - extra laws on marketing/lead-gen in this vertical",
+      "spam_scrutiny": "How aggressively Google polices fake listings/spam in this category",
+      "geo_tags": "Favourable state-level tags (see data/us_states.json)",
+      "market_profile": "rural | suburban | urban | affluent - which kind of market the niche monetizes best in; sets city_finder's default population sweet spot and ideal service-area cluster size",
+      "schema_type": "schema.org type to use ONLY in tenant mode (real business). Lead-gen mode uses Organization + Service"
+    },
+    "demand_tiers": {
+      "A": {
+        "label": "very high",
+        "searches_per_100k_residents_per_month": [
+          400,
+          1200
+        ]
+      },
+      "B": {
+        "label": "high",
+        "searches_per_100k_residents_per_month": [
+          150,
+          500
+        ]
+      },
+      "C": {
+        "label": "medium",
+        "searches_per_100k_residents_per_month": [
+          50,
+          200
+        ]
+      },
+      "D": {
+        "label": "niche",
+        "searches_per_100k_residents_per_month": [
+          10,
+          80
+        ]
+      }
+    },
+    "demand_tier_note": "Tier ranges are deliberately wide order-of-magnitude priors for the whole transactional keyword cluster (including 'near me' searches made inside the city). Use ONLY for triage. Real volumes come from Google Keyword Planner / DataForSEO / Ahrefs / Semrush in Phase 3.",
+    "sources_note": "Ranges synthesized from public cost guides, pay-per-call network marketplaces and rank-and-rent practitioner benchmarks as of 2026. Payouts and rents move with ZIP, season and buyer - always confirm with the current offer/tenant."
+  },
+  "niches": [
+    {
+      "id": "roofing",
+      "name": "Roofing",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 9,
+        "pay_per_call": 9,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        500,
+        15000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall; spikes after hail/wind/hurricane events",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        35,
+        90
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        1000,
+        3000
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "medium",
+      "geo_tags": [
+        "hail_belt",
+        "hurricane_coast",
+        "severe_storms"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "RoofingContractor",
+      "sub_services": [
+        "Roof Repair",
+        "Roof Replacement",
+        "Storm Damage Roof Repair",
+        "Roof Inspection",
+        "Emergency Roof Tarping",
+        "Metal Roofing",
+        "Roof Leak Repair"
+      ],
+      "seed_keywords": [
+        "roofer",
+        "roofing company",
+        "roofing contractor",
+        "roof repair",
+        "roof replacement",
+        "roof leak repair",
+        "storm damage roof repair"
+      ],
+      "notes": "Highest-value classic R&R niche but competitive in metros. Several states license roofers and restrict insurance-claim solicitation / deductible waivers (verify state rules). Storm-chaser competition after events."
+    },
+    {
+      "id": "siding",
+      "name": "Siding Installation & Repair",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 6,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        3000,
+        25000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall; after hail/wind events",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        80
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hail_belt",
+        "severe_storms"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Vinyl Siding",
+        "Fiber Cement Siding",
+        "Siding Repair",
+        "Storm Damage Siding"
+      ],
+      "seed_keywords": [
+        "siding contractor",
+        "siding installation",
+        "siding repair",
+        "vinyl siding",
+        "siding companies"
+      ],
+      "notes": "Pairs well with roofing/gutters. National exterior remodelers buy calls in many metros."
+    },
+    {
+      "id": "gutters",
+      "name": "Gutter Installation & Gutter Guards",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        800,
+        5000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Fall leaf season and spring rains",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        80
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "wooded_heavy",
+        "severe_storms"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Seamless Gutters",
+        "Gutter Guards",
+        "Gutter Repair",
+        "Downspouts"
+      ],
+      "seed_keywords": [
+        "gutter installation",
+        "gutter guards",
+        "seamless gutters",
+        "gutter repair",
+        "gutter company"
+      ],
+      "notes": "National gutter-guard brands buy calls broadly (good nationwide PPC). Local R&R is solid in wooded suburbs."
+    },
+    {
+      "id": "gutter-cleaning",
+      "name": "Gutter Cleaning",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 3,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        100,
+        350
+      ],
+      "urgency": "planned",
+      "seasonality": "highly_seasonal",
+      "peak": "Oct-Dec and spring",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        200,
+        600
+      ],
+      "per_lead_usd": [
+        15,
+        35
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "wooded_heavy"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Gutter Cleaning",
+        "Downspout Unclogging",
+        "Roof Debris Removal"
+      ],
+      "seed_keywords": [
+        "gutter cleaning",
+        "gutter cleaning service",
+        "gutter cleaners"
+      ],
+      "notes": "Low ticket; best as a page on a gutter or pressure-washing site, not a standalone rental."
+    },
+    {
+      "id": "windows",
+      "name": "Window Replacement",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        5000,
+        25000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring and fall",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        30,
+        90
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Window Replacement",
+        "Energy-Efficient Windows",
+        "Window Installation",
+        "Patio Door Replacement"
+      ],
+      "seed_keywords": [
+        "window replacement",
+        "replacement windows",
+        "window installation",
+        "window companies"
+      ],
+      "notes": "Strong national buyers (big window brands) -> good nationwide PPC. Local SERPs often dominated by national brands."
+    },
+    {
+      "id": "painting",
+      "name": "House Painting",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        500,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall (exterior)",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "high",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HousePainter",
+      "sub_services": [
+        "Interior Painting",
+        "Exterior Painting",
+        "Cabinet Painting",
+        "Commercial Painting"
+      ],
+      "seed_keywords": [
+        "painters",
+        "house painters",
+        "painting contractors",
+        "interior painting",
+        "exterior painting"
+      ],
+      "notes": "Many buyers, modest budgets. Thumbtack/Angi heavy."
+    },
+    {
+      "id": "pressure-washing",
+      "name": "Pressure Washing",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 3,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        150,
+        800
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-summer",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        800
+      ],
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "House Washing",
+        "Driveway Cleaning",
+        "Roof Soft Washing",
+        "Deck & Fence Cleaning"
+      ],
+      "seed_keywords": [
+        "pressure washing",
+        "power washing",
+        "soft washing",
+        "house washing",
+        "driveway cleaning"
+      ],
+      "notes": "Low barrier to entry -> many operators with small budgets. Easy to rank, harder to rent at a good price."
+    },
+    {
+      "id": "window-cleaning",
+      "name": "Window Cleaning",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 2,
+        "nationwide": 1
+      },
+      "ticket_usd": [
+        150,
+        600
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring and fall",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        200,
+        600
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Residential Window Cleaning",
+        "Commercial Window Cleaning",
+        "Screen Cleaning"
+      ],
+      "seed_keywords": [
+        "window cleaning",
+        "window washing",
+        "window cleaners"
+      ],
+      "notes": "Low ticket. Commercial (storefront/office) contracts add LTV."
+    },
+    {
+      "id": "christmas-lights",
+      "name": "Christmas Light Installation",
+      "category": "exterior",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 1,
+        "nationwide": 1
+      },
+      "ticket_usd": [
+        500,
+        3000
+      ],
+      "urgency": "planned",
+      "seasonality": "highly_seasonal",
+      "peak": "Oct-Dec",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Holiday Light Installation",
+        "Commercial Holiday Lighting",
+        "Light Removal & Storage"
+      ],
+      "seed_keywords": [
+        "christmas light installation",
+        "holiday lighting installation",
+        "christmas light hanging service"
+      ],
+      "notes": "Seasonal rental only (often bundled with landscaping/pressure washing buyers). Index content by August."
+    },
+    {
+      "id": "water-damage",
+      "name": "Water Damage Restoration",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 9,
+        "pay_per_call": 10,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        1500,
+        10000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter pipe bursts, spring floods, storm events",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        50,
+        200
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": [
+        1500,
+        3500
+      ],
+      "per_lead_usd": [
+        75,
+        250
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "medium",
+      "geo_tags": [
+        "humid_or_wet",
+        "hurricane_coast",
+        "freeze_belt",
+        "basements_common"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Water Damage Restoration",
+        "Water Extraction",
+        "Flood Cleanup",
+        "Burst Pipe Cleanup",
+        "Sewage Cleanup",
+        "Structural Drying",
+        "Basement Flood Cleanup"
+      ],
+      "seed_keywords": [
+        "water damage restoration",
+        "water damage repair",
+        "flood cleanup",
+        "water removal",
+        "water extraction",
+        "flooded basement cleanup",
+        "water damage company"
+      ],
+      "notes": "Top pay-per-call vertical (insurance-paid jobs). National franchises compete hard in metros. Some states restrict assignment-of-benefits and public-adjusting -> never imply you handle insurance claims."
+    },
+    {
+      "id": "fire-damage",
+      "name": "Fire & Smoke Damage Restoration",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 8,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        3000,
+        50000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter heating season; wildfire season",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        50,
+        200
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": [
+        800,
+        2500
+      ],
+      "per_lead_usd": [
+        100,
+        300
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "wildfire_risk"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Fire Damage Restoration",
+        "Smoke Damage Cleanup",
+        "Soot Removal",
+        "Emergency Board-Up"
+      ],
+      "seed_keywords": [
+        "fire damage restoration",
+        "smoke damage cleanup",
+        "fire restoration company",
+        "soot removal"
+      ],
+      "notes": "Low volume, very high value. Usually a section of a water-damage site rather than a standalone build."
+    },
+    {
+      "id": "mold-remediation",
+      "name": "Mold Remediation",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 8,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        1500,
+        6000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Humid months; after floods",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        90
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "humid_or_wet",
+        "hurricane_coast",
+        "basements_common"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Mold Removal",
+        "Mold Inspection & Testing",
+        "Attic Mold Removal",
+        "Basement Mold Removal",
+        "Black Mold Removal"
+      ],
+      "seed_keywords": [
+        "mold remediation",
+        "mold removal",
+        "mold inspection",
+        "black mold removal",
+        "mold testing"
+      ],
+      "notes": "Several states license mold assessors/remediators (e.g. TX, FL, NY, LA) -> tenant must hold the license; avoid health claims."
+    },
+    {
+      "id": "biohazard-cleanup",
+      "name": "Biohazard & Crime Scene Cleanup",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        1500,
+        15000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Summer",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        50,
+        150
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        75,
+        200
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Crime Scene Cleanup",
+        "Unattended Death Cleanup",
+        "Biohazard Cleanup",
+        "Hoarding Cleanup"
+      ],
+      "seed_keywords": [
+        "biohazard cleanup",
+        "crime scene cleanup",
+        "unattended death cleanup",
+        "trauma cleanup"
+      ],
+      "notes": "Sensitive audience: write with compassion, no sensational content. Few buyers per metro -> pre-sell first."
+    },
+    {
+      "id": "hoarding-cleanup",
+      "name": "Hoarding Cleanup",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        1000,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Hoarding Cleanup",
+        "Estate Cleanouts",
+        "Deep Cleaning"
+      ],
+      "seed_keywords": [
+        "hoarding cleanup",
+        "hoarder cleaning services",
+        "hoarding cleaning company"
+      ],
+      "notes": "Often bundled with junk removal or biohazard buyers."
+    },
+    {
+      "id": "plumbing",
+      "name": "Plumbing",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 10,
+        "nationwide": 10
+      },
+      "ticket_usd": [
+        150,
+        2500
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter freezes; holidays",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        25,
+        80
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2500
+      ],
+      "per_lead_usd": [
+        35,
+        100
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "medium",
+      "geo_tags": [
+        "freeze_belt",
+        "older_housing_stock",
+        "hard_water"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "Plumber",
+      "sub_services": [
+        "Emergency Plumbing",
+        "Drain Cleaning",
+        "Water Heater Repair & Replacement",
+        "Leak Detection",
+        "Sewer Line Repair",
+        "Toilet Repair",
+        "Repiping"
+      ],
+      "seed_keywords": [
+        "plumber",
+        "emergency plumber",
+        "24 hour plumber",
+        "plumbing company",
+        "plumbing repair",
+        "plumbing services"
+      ],
+      "notes": "Huge volume and many buyers, but LSAs + ads push organic far down. Best in small/mid cities or as niche sub-service sites (water heaters, sewer lines). Licensed trade: tenant license number required on site."
+    },
+    {
+      "id": "water-heater",
+      "name": "Water Heater Repair & Installation",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        300,
+        4500
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        25,
+        70
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        30,
+        90
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hard_water",
+        "freeze_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "Plumber",
+      "sub_services": [
+        "Water Heater Repair",
+        "Water Heater Replacement",
+        "Tankless Water Heaters",
+        "Water Heater Installation"
+      ],
+      "seed_keywords": [
+        "water heater repair",
+        "water heater replacement",
+        "water heater installation",
+        "tankless water heater installation"
+      ],
+      "notes": "Sub-niche of plumbing with less competition and a clear high-intent emergency."
+    },
+    {
+      "id": "drain-sewer",
+      "name": "Drain Cleaning & Sewer Repair",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        150,
+        12000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Holidays; heavy rain",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        25,
+        70
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        600,
+        1800
+      ],
+      "per_lead_usd": [
+        30,
+        100
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "older_housing_stock"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "Plumber",
+      "sub_services": [
+        "Drain Cleaning",
+        "Hydro Jetting",
+        "Sewer Line Repair",
+        "Sewer Line Replacement",
+        "Sewer Camera Inspection",
+        "Trenchless Sewer Repair"
+      ],
+      "seed_keywords": [
+        "drain cleaning",
+        "sewer line repair",
+        "clogged drain",
+        "hydro jetting",
+        "sewer line replacement",
+        "rooter service"
+      ],
+      "notes": "Sewer line replacement tickets are large; older-housing cities convert best."
+    },
+    {
+      "id": "septic",
+      "name": "Septic Services",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 9,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        300,
+        15000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Spring-summer",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        25,
+        70
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        30,
+        90
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "septic_common"
+      ],
+      "market_profile": "rural",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Septic Tank Pumping",
+        "Septic Repair",
+        "Septic Installation",
+        "Drain Field Repair",
+        "Septic Inspection"
+      ],
+      "seed_keywords": [
+        "septic tank pumping",
+        "septic service",
+        "septic repair",
+        "septic installation",
+        "septic inspection"
+      ],
+      "notes": "Classic low-competition R&R niche in rural/exurban counties. Target a county or metro fringe rather than one town."
+    },
+    {
+      "id": "hvac",
+      "name": "HVAC (AC & Heating)",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 10,
+        "nationwide": 10
+      },
+      "ticket_usd": [
+        150,
+        15000
+      ],
+      "urgency": "emergency",
+      "seasonality": "seasonal",
+      "peak": "Summer AC failures; winter heating",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        25,
+        75
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2500
+      ],
+      "per_lead_usd": [
+        40,
+        120
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hot_summer",
+        "freeze_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HVACBusiness",
+      "sub_services": [
+        "AC Repair",
+        "AC Installation",
+        "Furnace Repair",
+        "Heat Pump Repair",
+        "HVAC Maintenance",
+        "Ductwork",
+        "Emergency HVAC Service"
+      ],
+      "seed_keywords": [
+        "ac repair",
+        "hvac repair",
+        "air conditioning repair",
+        "furnace repair",
+        "hvac company",
+        "ac installation",
+        "heating and cooling"
+      ],
+      "notes": "Strong buyers and payouts; volatile seasonality. Replacement installs ($6k-$15k) make leads very valuable."
+    },
+    {
+      "id": "electrician",
+      "name": "Electrician",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        150,
+        5000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Storm seasons",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        600,
+        1800
+      ],
+      "per_lead_usd": [
+        30,
+        90
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "older_housing_stock",
+        "storm_outages"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "Electrician",
+      "sub_services": [
+        "Electrical Repair",
+        "Panel Upgrades",
+        "EV Charger Installation",
+        "Generator Installation",
+        "Lighting Installation",
+        "Whole-Home Rewiring",
+        "Emergency Electrician"
+      ],
+      "seed_keywords": [
+        "electrician",
+        "electrical contractor",
+        "emergency electrician",
+        "electrical repair",
+        "panel upgrade"
+      ],
+      "notes": "Licensed trade. Panel upgrades and EV chargers are rising sub-niches."
+    },
+    {
+      "id": "ev-charger",
+      "name": "EV Charger Installation",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 4,
+        "nationwide": 4
+      },
+      "ticket_usd": [
+        800,
+        2500
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        400,
+        1000
+      ],
+      "per_lead_usd": [
+        30,
+        70
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "Electrician",
+      "sub_services": [
+        "Level 2 Charger Installation",
+        "Panel Upgrade for EV",
+        "Commercial EV Charging"
+      ],
+      "seed_keywords": [
+        "ev charger installation",
+        "tesla charger installation",
+        "level 2 charger installation",
+        "home ev charger installation"
+      ],
+      "notes": "Strongest in high-EV-adoption metros (verify with state EV registration data). Must be a licensed electrician."
+    },
+    {
+      "id": "generator",
+      "name": "Standby Generator Installation",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        7000,
+        20000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Before/after hurricane and winter-storm seasons",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        40,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        60,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "storm_outages",
+        "hurricane_coast",
+        "freeze_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "Electrician",
+      "sub_services": [
+        "Standby Generator Installation",
+        "Generator Repair",
+        "Generator Maintenance",
+        "Portable Generator Hookups"
+      ],
+      "seed_keywords": [
+        "generator installation",
+        "whole house generator",
+        "standby generator",
+        "generator repair",
+        "generac installer"
+      ],
+      "notes": "Demand explodes after outages; don't use manufacturer trademarks as if you were an authorized dealer."
+    },
+    {
+      "id": "water-treatment",
+      "name": "Water Softeners & Filtration",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        800,
+        5000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        70
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1200
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hard_water",
+        "well_water_common"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Water Softener Installation",
+        "Whole-House Water Filtration",
+        "Reverse Osmosis Systems",
+        "Well Water Treatment"
+      ],
+      "seed_keywords": [
+        "water softener installation",
+        "water filtration system",
+        "whole house water filter",
+        "water treatment company"
+      ],
+      "notes": "Avoid health claims about contaminants unless sourced to official water-quality reports."
+    },
+    {
+      "id": "well-services",
+      "name": "Well Drilling & Well Pump Repair",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        500,
+        25000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Summer droughts",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "well_water_common"
+      ],
+      "market_profile": "rural",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Well Pump Repair",
+        "Well Drilling",
+        "Pressure Tank Replacement",
+        "Well Inspection"
+      ],
+      "seed_keywords": [
+        "well pump repair",
+        "well drilling",
+        "well service",
+        "well pump replacement"
+      ],
+      "notes": "Rural, low competition, emergency when water stops. Few buyers -> confirm a tenant exists before building."
+    },
+    {
+      "id": "radon",
+      "name": "Radon Testing & Mitigation",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        800,
+        2500
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Real-estate season; winter testing",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "radon_high"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Radon Testing",
+        "Radon Mitigation Systems",
+        "Radon for Real Estate Transactions"
+      ],
+      "seed_keywords": [
+        "radon mitigation",
+        "radon testing",
+        "radon mitigation system",
+        "radon removal"
+      ],
+      "notes": "Real-estate transaction driven. Several states certify radon professionals; cite EPA for health info only."
+    },
+    {
+      "id": "insulation",
+      "name": "Insulation (Spray Foam & Attic)",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 5,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        1500,
+        8000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Fall/winter and early summer",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "freeze_belt",
+        "hot_summer"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Spray Foam Insulation",
+        "Attic Insulation",
+        "Blown-In Insulation",
+        "Insulation Removal"
+      ],
+      "seed_keywords": [
+        "spray foam insulation",
+        "attic insulation",
+        "insulation contractors",
+        "blown in insulation"
+      ],
+      "notes": "Rebate/tax-credit angles change often - verify current programs before writing about them."
+    },
+    {
+      "id": "chimney",
+      "name": "Chimney Sweep & Repair",
+      "category": "mechanical",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        150,
+        6000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Late summer to winter",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "freeze_belt",
+        "older_housing_stock"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Chimney Sweeping",
+        "Chimney Repair",
+        "Chimney Inspection",
+        "Chimney Caps",
+        "Masonry Repair"
+      ],
+      "seed_keywords": [
+        "chimney sweep",
+        "chimney repair",
+        "chimney cleaning",
+        "chimney inspection"
+      ],
+      "notes": "Seasonal; few buyers per metro but low competition."
+    },
+    {
+      "id": "garage-door",
+      "name": "Garage Door Repair",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        150,
+        4000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter (spring failures)",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        25,
+        75
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Garage Door Repair",
+        "Broken Spring Replacement",
+        "Garage Door Opener Repair",
+        "New Garage Door Installation",
+        "Off-Track Garage Door Repair"
+      ],
+      "seed_keywords": [
+        "garage door repair",
+        "garage door spring repair",
+        "garage door installation",
+        "garage door opener repair"
+      ],
+      "notes": "Heavy fake-listing history: Google applies extra scrutiny/verification in this category. Organic-only R&R is viable; never fake GBPs."
+    },
+    {
+      "id": "locksmith",
+      "name": "Locksmith",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 3,
+        "pay_per_call": 6,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        75,
+        500
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        10,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        1000
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "Locksmith",
+      "sub_services": [
+        "Lockout Service",
+        "Rekeying",
+        "Lock Installation",
+        "Car Lockout",
+        "Car Key Replacement"
+      ],
+      "seed_keywords": [
+        "locksmith",
+        "emergency locksmith",
+        "car locksmith",
+        "lockout service"
+      ],
+      "notes": "Notorious scam category with advanced verification and low consumer trust; several states license locksmiths. Generally avoid for new operators."
+    },
+    {
+      "id": "appliance-repair",
+      "name": "Appliance Repair",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 6,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        150,
+        600
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Holidays (ovens), summer (refrigerators)",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        15,
+        45
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Refrigerator Repair",
+        "Washer Repair",
+        "Dryer Repair",
+        "Dishwasher Repair",
+        "Oven & Stove Repair"
+      ],
+      "seed_keywords": [
+        "appliance repair",
+        "refrigerator repair",
+        "washer repair",
+        "dryer repair",
+        "dishwasher repair"
+      ],
+      "notes": "Fake-listing problems exist here too. Don't claim brand authorization (e.g. 'authorized Whirlpool service') unless the tenant is."
+    },
+    {
+      "id": "handyman",
+      "name": "Handyman Services",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        100,
+        1500
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "high",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Home Repairs",
+        "Drywall Patching",
+        "Furniture Assembly",
+        "TV Mounting",
+        "Door & Window Repair"
+      ],
+      "seed_keywords": [
+        "handyman",
+        "handyman services",
+        "home repair services",
+        "handyman near me"
+      ],
+      "notes": "Many states cap unlicensed handyman job size (e.g. California's minor-work threshold) -> scope pages accordingly."
+    },
+    {
+      "id": "drywall",
+      "name": "Drywall Repair & Installation",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        200,
+        3000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        300,
+        800
+      ],
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Drywall Repair",
+        "Drywall Installation",
+        "Popcorn Ceiling Removal",
+        "Texture Matching"
+      ],
+      "seed_keywords": [
+        "drywall repair",
+        "drywall contractors",
+        "drywall installation",
+        "popcorn ceiling removal"
+      ],
+      "notes": "Easy to rank, modest rent. Good add-on page for handyman/painting sites."
+    },
+    {
+      "id": "home-inspection",
+      "name": "Home Inspection",
+      "category": "home-repair",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        300,
+        700
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring/summer real-estate season",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        25,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Pre-Purchase Inspection",
+        "Pre-Listing Inspection",
+        "New Construction Inspection",
+        "Radon & Mold Add-Ons"
+      ],
+      "seed_keywords": [
+        "home inspection",
+        "home inspector",
+        "house inspection",
+        "pre purchase home inspection"
+      ],
+      "notes": "Buyers come from agent referrals -> SEO leads are a supplement; many states license inspectors."
+    },
+    {
+      "id": "pest-control",
+      "name": "Pest Control",
+      "category": "pest",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 9,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        150,
+        1200
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring-summer",
+      "demand_tier": "A",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        25,
+        70
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "termite_heavy",
+        "humid_or_wet",
+        "hot_summer"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "General Pest Control",
+        "Termite Control",
+        "Rodent Control",
+        "Ant Control",
+        "Cockroach Extermination",
+        "Mosquito Control"
+      ],
+      "seed_keywords": [
+        "pest control",
+        "exterminator",
+        "pest control company",
+        "bug exterminator",
+        "pest control service"
+      ],
+      "notes": "Recurring-plan LTV makes leads valuable; national brands buy calls widely. Applicators are state-licensed."
+    },
+    {
+      "id": "termite",
+      "name": "Termite Control",
+      "category": "pest",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        300,
+        3000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring swarm season",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        70
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        600,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "termite_heavy"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Termite Inspection",
+        "Termite Treatment",
+        "Termite Bait Systems",
+        "WDO / Real-Estate Termite Letters"
+      ],
+      "seed_keywords": [
+        "termite control",
+        "termite treatment",
+        "termite inspection",
+        "termite exterminator"
+      ],
+      "notes": "Strong in the South/Southwest; real-estate WDO inspections add steady volume."
+    },
+    {
+      "id": "bed-bugs",
+      "name": "Bed Bug Extermination",
+      "category": "pest",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        500,
+        5000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Summer-fall travel season",
+      "demand_tier": "D",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        70
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1200
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Bed Bug Heat Treatment",
+        "Bed Bug Inspection",
+        "Bed Bug Chemical Treatment",
+        "Multi-Unit Bed Bug Programs"
+      ],
+      "seed_keywords": [
+        "bed bug exterminator",
+        "bed bug treatment",
+        "bed bug removal",
+        "bed bug heat treatment"
+      ],
+      "notes": "Urban/dense metros and college towns. Emergency + high ticket = good calls."
+    },
+    {
+      "id": "wildlife-removal",
+      "name": "Wildlife & Animal Removal",
+      "category": "pest",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        300,
+        2000
+      ],
+      "urgency": "emergency",
+      "seasonality": "seasonal",
+      "peak": "Spring (babies), fall-winter (attic entry)",
+      "demand_tier": "D",
+      "lsa_presence": "medium",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        25,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        30,
+        90
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "wooded_heavy"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Raccoon Removal",
+        "Squirrel Removal",
+        "Bat Removal",
+        "Snake Removal",
+        "Dead Animal Removal",
+        "Attic Exclusion"
+      ],
+      "seed_keywords": [
+        "animal removal",
+        "wildlife removal",
+        "raccoon removal",
+        "bat removal",
+        "squirrel removal"
+      ],
+      "notes": "Low competition, urgent calls. Many states require nuisance-wildlife permits; avoid content advising illegal trapping/poisons."
+    },
+    {
+      "id": "mosquito-control",
+      "name": "Mosquito Control",
+      "category": "pest",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 4,
+        "nationwide": 4
+      },
+      "ticket_usd": [
+        300,
+        1500
+      ],
+      "urgency": "planned",
+      "seasonality": "highly_seasonal",
+      "peak": "Late spring-summer",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "low",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1000
+      ],
+      "per_lead_usd": [
+        25,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "humid_or_wet",
+        "hot_summer"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Mosquito Yard Treatments",
+        "Event Mosquito Spraying",
+        "Tick Control"
+      ],
+      "seed_keywords": [
+        "mosquito control",
+        "mosquito spraying",
+        "mosquito treatment for yard"
+      ],
+      "notes": "Seasonal recurring plans; usually rented to pest-control or lawn-care companies."
+    },
+    {
+      "id": "tree-service",
+      "name": "Tree Service",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 9,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        300,
+        5000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall; spikes after storms/ice",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        25,
+        60
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        2000
+      ],
+      "per_lead_usd": [
+        40,
+        110
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "wooded_heavy",
+        "severe_storms",
+        "hurricane_coast"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Tree Removal",
+        "Tree Trimming & Pruning",
+        "Stump Grinding",
+        "Emergency Tree Removal",
+        "Storm Cleanup",
+        "Land Clearing",
+        "Tree Health Assessment"
+      ],
+      "seed_keywords": [
+        "tree service",
+        "tree removal",
+        "tree trimming",
+        "stump grinding",
+        "emergency tree removal",
+        "tree cutting service"
+      ],
+      "notes": "Benchmark R&R niche: real tickets, many small owner-operators, moderate competition. A few states license arborists/tree experts (verify)."
+    },
+    {
+      "id": "stump-grinding",
+      "name": "Stump Grinding",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        100,
+        600
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        200,
+        600
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Stump Grinding",
+        "Stump Removal",
+        "Root Removal"
+      ],
+      "seed_keywords": [
+        "stump grinding",
+        "stump removal",
+        "tree stump removal"
+      ],
+      "notes": "Better as a page on a tree-service site; standalone only in small markets."
+    },
+    {
+      "id": "land-clearing",
+      "name": "Land Clearing & Forestry Mulching",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 3,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        1500,
+        25000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Dry seasons",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth",
+        "wooded_heavy"
+      ],
+      "market_profile": "rural",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Land Clearing",
+        "Forestry Mulching",
+        "Lot Clearing",
+        "Brush Removal",
+        "Underbrush Clearing"
+      ],
+      "seed_keywords": [
+        "land clearing",
+        "forestry mulching",
+        "lot clearing",
+        "brush clearing",
+        "land clearing services"
+      ],
+      "notes": "Exurban growth corridors. Operators carry expensive equipment and need steady work -> good tenants."
+    },
+    {
+      "id": "excavation",
+      "name": "Excavation & Grading",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        2000,
+        50000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "rural",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Excavation",
+        "Grading",
+        "Site Preparation",
+        "Drainage Solutions",
+        "Trenching"
+      ],
+      "seed_keywords": [
+        "excavation contractor",
+        "excavating company",
+        "land grading",
+        "site preparation"
+      ],
+      "notes": "Mixed B2B/residential; big tickets, few searches. Bundle with land clearing."
+    },
+    {
+      "id": "concrete",
+      "name": "Concrete Contractor",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        1500,
+        15000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall",
+      "demand_tier": "B",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        120
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Concrete Driveways",
+        "Concrete Patios",
+        "Sidewalks",
+        "Slabs & Foundations",
+        "Stamped Concrete",
+        "Concrete Repair"
+      ],
+      "seed_keywords": [
+        "concrete contractor",
+        "concrete company",
+        "concrete driveway",
+        "concrete patio",
+        "stamped concrete"
+      ],
+      "notes": "Popular R&R niche: lots of small contractors, low LSA presence."
+    },
+    {
+      "id": "foundation-repair",
+      "name": "Foundation Repair",
+      "category": "structural",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 8,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        2500,
+        20000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "After droughts/wet cycles",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        40,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        1000,
+        3000
+      ],
+      "per_lead_usd": [
+        60,
+        200
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "expansive_clay",
+        "basements_common"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Foundation Repair",
+        "Pier & Beam Repair",
+        "Slab Foundation Repair",
+        "Foundation Inspection",
+        "House Leveling"
+      ],
+      "seed_keywords": [
+        "foundation repair",
+        "foundation repair company",
+        "slab foundation repair",
+        "foundation crack repair",
+        "house leveling"
+      ],
+      "notes": "High value; national foundation brands compete in large metros. Expansive-clay regions are prime."
+    },
+    {
+      "id": "basement-waterproofing",
+      "name": "Basement Waterproofing",
+      "category": "structural",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 8,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        2000,
+        15000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring thaw and rainy seasons",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        40,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        1000,
+        2500
+      ],
+      "per_lead_usd": [
+        60,
+        180
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "basements_common"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Basement Waterproofing",
+        "Sump Pump Installation",
+        "Interior Drainage Systems",
+        "Wall Crack Repair",
+        "Basement Leak Repair"
+      ],
+      "seed_keywords": [
+        "basement waterproofing",
+        "sump pump installation",
+        "basement leak repair",
+        "wet basement repair"
+      ],
+      "notes": "Midwest/Northeast staple; urgent after heavy rain."
+    },
+    {
+      "id": "crawl-space",
+      "name": "Crawl Space Repair & Encapsulation",
+      "category": "structural",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 7,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        3000,
+        15000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Humid months",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": [
+        40,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        60,
+        180
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "crawlspace_common",
+        "humid_or_wet"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Crawl Space Encapsulation",
+        "Crawl Space Dehumidifiers",
+        "Vapor Barriers",
+        "Crawl Space Mold & Moisture Repair"
+      ],
+      "seed_keywords": [
+        "crawl space encapsulation",
+        "crawl space repair",
+        "crawl space waterproofing",
+        "vapor barrier installation"
+      ],
+      "notes": "Southeast-heavy; often the same buyers as foundation/waterproofing."
+    },
+    {
+      "id": "fencing",
+      "name": "Fence Installation",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 4,
+        "nationwide": 4
+      },
+      "ticket_usd": [
+        1500,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-summer",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Wood Fences",
+        "Vinyl Fences",
+        "Chain Link Fences",
+        "Aluminum & Wrought Iron Fences",
+        "Fence Repair",
+        "Gates"
+      ],
+      "seed_keywords": [
+        "fence company",
+        "fence installation",
+        "fence contractors",
+        "fence repair",
+        "privacy fence installation"
+      ],
+      "notes": "Reliable R&R niche; HOA/permit rules make great unique local content."
+    },
+    {
+      "id": "decks",
+      "name": "Deck Builder",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        5000,
+        35000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-summer",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "affluent",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Deck Building",
+        "Composite Decks",
+        "Deck Repair",
+        "Covered Decks & Pergolas"
+      ],
+      "seed_keywords": [
+        "deck builders",
+        "deck contractors",
+        "composite deck installation",
+        "deck repair"
+      ],
+      "notes": "High ticket, seasonal. Permit requirements per city = unique content."
+    },
+    {
+      "id": "hardscaping",
+      "name": "Hardscaping, Pavers & Retaining Walls",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        3000,
+        40000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        1800
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "affluent",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Paver Patios",
+        "Retaining Walls",
+        "Outdoor Kitchens",
+        "Fire Pits",
+        "Walkways"
+      ],
+      "seed_keywords": [
+        "hardscaping",
+        "paver installation",
+        "retaining wall contractors",
+        "paver patio",
+        "outdoor kitchen builders"
+      ],
+      "notes": "High ticket and low competition in many mid-size cities."
+    },
+    {
+      "id": "landscaping",
+      "name": "Landscaping",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        500,
+        20000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "high",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        25,
+        80
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Landscape Design",
+        "Sod Installation",
+        "Mulching & Bed Maintenance",
+        "Landscape Lighting",
+        "Drainage"
+      ],
+      "seed_keywords": [
+        "landscaping",
+        "landscapers",
+        "landscaping company",
+        "landscape design",
+        "sod installation"
+      ],
+      "notes": "Design/install jobs are valuable; maintenance leads are cheap."
+    },
+    {
+      "id": "lawn-care",
+      "name": "Lawn Care & Mowing",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        40,
+        300
+      ],
+      "urgency": "planned",
+      "seasonality": "highly_seasonal",
+      "peak": "Spring-summer",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        800
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Lawn Mowing",
+        "Fertilization & Weed Control",
+        "Aeration & Overseeding",
+        "Leaf Removal"
+      ],
+      "seed_keywords": [
+        "lawn care",
+        "lawn mowing service",
+        "lawn service",
+        "yard maintenance"
+      ],
+      "notes": "Low ticket; aggregator apps dominate. Recurring LTV only partly offsets."
+    },
+    {
+      "id": "irrigation",
+      "name": "Irrigation & Sprinkler Repair",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        150,
+        5000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring startup, fall winterization",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        25,
+        70
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hot_summer",
+        "high_growth"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Sprinkler Repair",
+        "Irrigation Installation",
+        "Sprinkler Winterization",
+        "Drip Irrigation"
+      ],
+      "seed_keywords": [
+        "sprinkler repair",
+        "irrigation repair",
+        "sprinkler system installation",
+        "irrigation contractors"
+      ],
+      "notes": "Texas requires licensed irrigators (TCEQ); verify other states."
+    },
+    {
+      "id": "artificial-turf",
+      "name": "Artificial Turf Installation",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        3000,
+        15000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hot_summer",
+        "high_growth"
+      ],
+      "market_profile": "affluent",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Artificial Grass Installation",
+        "Putting Greens",
+        "Pet Turf",
+        "Commercial Turf"
+      ],
+      "seed_keywords": [
+        "artificial turf installation",
+        "artificial grass installation",
+        "synthetic turf",
+        "putting green installation"
+      ],
+      "notes": "Water-restriction regions (AZ, NV, CA, TX) are strongest; rebates change - verify."
+    },
+    {
+      "id": "pool-service",
+      "name": "Pool Service & Repair",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        100,
+        3000
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Spring opening; year-round in Sun Belt",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        25,
+        70
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "pool_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Weekly Pool Cleaning",
+        "Pool Repair",
+        "Pool Pump & Filter Repair",
+        "Green Pool Cleanup",
+        "Pool Opening & Closing"
+      ],
+      "seed_keywords": [
+        "pool service",
+        "pool cleaning service",
+        "pool repair",
+        "pool pump repair"
+      ],
+      "notes": "Recurring revenue; Sun Belt only."
+    },
+    {
+      "id": "pool-builder",
+      "name": "Pool Builder",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        40000,
+        120000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Late winter-spring",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        50,
+        150
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        3000
+      ],
+      "per_lead_usd": [
+        100,
+        300
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "pool_belt",
+        "high_growth"
+      ],
+      "market_profile": "affluent",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Inground Pool Construction",
+        "Fiberglass Pools",
+        "Pool Remodeling",
+        "Pool Decks"
+      ],
+      "seed_keywords": [
+        "pool builders",
+        "inground pool installation",
+        "pool contractors",
+        "fiberglass pool installation"
+      ],
+      "notes": "Huge tickets, long sales cycles; leads worth $100+ to builders. Several Sun Belt states license pool contractors."
+    },
+    {
+      "id": "snow-removal",
+      "name": "Snow Removal & Plowing",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        50,
+        5000
+      ],
+      "urgency": "emergency",
+      "seasonality": "highly_seasonal",
+      "peak": "Nov-Mar; selling season Aug-Oct",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        400,
+        1200
+      ],
+      "per_lead_usd": [
+        25,
+        80
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "snow_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Residential Snow Plowing",
+        "Commercial Snow Removal",
+        "Salting & De-Icing",
+        "Seasonal Contracts"
+      ],
+      "seed_keywords": [
+        "snow removal",
+        "snow plowing",
+        "snow plow service",
+        "commercial snow removal"
+      ],
+      "notes": "Commercial seasonal contracts are the prize. Seasonal rental only."
+    },
+    {
+      "id": "paving",
+      "name": "Asphalt Paving & Sealcoating",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        2000,
+        25000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        1800
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Asphalt Driveways",
+        "Sealcoating",
+        "Parking Lot Paving",
+        "Asphalt Repair",
+        "Line Striping"
+      ],
+      "seed_keywords": [
+        "asphalt paving",
+        "driveway paving",
+        "sealcoating",
+        "parking lot paving",
+        "asphalt repair"
+      ],
+      "notes": "Residential + commercial; watch for transient paving-scam reputation in content tone."
+    },
+    {
+      "id": "demolition",
+      "name": "Demolition",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        3000,
+        50000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        1800
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Residential Demolition",
+        "Interior Demolition",
+        "Pool Removal",
+        "Concrete Removal"
+      ],
+      "seed_keywords": [
+        "demolition contractor",
+        "demolition company",
+        "house demolition",
+        "pool removal"
+      ],
+      "notes": "Asbestos surveys are often legally required before demolition - mention, don't advise."
+    },
+    {
+      "id": "metal-buildings",
+      "name": "Metal Buildings, Garages & Pole Barns",
+      "category": "outdoor",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        15000,
+        100000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        800,
+        2500
+      ],
+      "per_lead_usd": [
+        75,
+        250
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "rural",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Metal Garages",
+        "Pole Barns",
+        "Workshops",
+        "Carports",
+        "Barndominiums"
+      ],
+      "seed_keywords": [
+        "metal buildings",
+        "pole barn builders",
+        "metal garage",
+        "barndominium builders"
+      ],
+      "notes": "Rural/exurban; very high ticket per lead."
+    },
+    {
+      "id": "kitchen-remodeling",
+      "name": "Kitchen Remodeling",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        15000,
+        80000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Jan-Apr",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        40,
+        100
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        3000
+      ],
+      "per_lead_usd": [
+        75,
+        250
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Kitchen Remodeling",
+        "Cabinet Installation",
+        "Countertops",
+        "Kitchen Design"
+      ],
+      "seed_keywords": [
+        "kitchen remodeling",
+        "kitchen remodel contractors",
+        "kitchen renovation",
+        "kitchen cabinets installation"
+      ],
+      "notes": "Houzz/Angi dominate; strong portfolio content needed (tenant photos)."
+    },
+    {
+      "id": "bathroom-remodeling",
+      "name": "Bathroom Remodeling",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        8000,
+        40000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Jan-Apr",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        40,
+        120
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        2500
+      ],
+      "per_lead_usd": [
+        75,
+        200
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "GeneralContractor",
+      "sub_services": [
+        "Bathroom Remodeling",
+        "Tub-to-Shower Conversions",
+        "Walk-In Showers",
+        "Accessible Bathrooms"
+      ],
+      "seed_keywords": [
+        "bathroom remodel",
+        "bathroom remodeling contractors",
+        "shower remodel",
+        "tub to shower conversion"
+      ],
+      "notes": "National one-day bath remodelers buy calls aggressively -> good nationwide PPC."
+    },
+    {
+      "id": "walk-in-tubs",
+      "name": "Walk-In Tubs & Senior Bath Safety",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 3,
+        "pay_per_call": 8,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        5000,
+        20000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        40,
+        120
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        60,
+        150
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Walk-In Tubs",
+        "Walk-In Showers",
+        "Grab Bars & Safety"
+      ],
+      "seed_keywords": [
+        "walk in tubs",
+        "walk in bathtub",
+        "walk in tub installation",
+        "walk in shower for seniors"
+      ],
+      "notes": "Nationwide PPC play. Senior audience: avoid pressure tactics and unsubstantiated Medicare/coverage claims."
+    },
+    {
+      "id": "flooring",
+      "name": "Flooring Installation",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        1500,
+        12000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring and pre-holiday",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "high",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Hardwood Flooring",
+        "Luxury Vinyl Plank",
+        "Tile Installation",
+        "Carpet Installation",
+        "Floor Refinishing"
+      ],
+      "seed_keywords": [
+        "flooring installation",
+        "flooring contractors",
+        "hardwood floor installation",
+        "tile installation"
+      ],
+      "notes": "Retail flooring stores compete; installers love direct leads."
+    },
+    {
+      "id": "epoxy-flooring",
+      "name": "Epoxy & Garage Floor Coatings",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        1500,
+        7000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring-fall",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        40,
+        120
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Garage Floor Epoxy",
+        "Polyaspartic Coatings",
+        "Commercial Epoxy",
+        "Concrete Polishing"
+      ],
+      "seed_keywords": [
+        "epoxy flooring",
+        "garage floor epoxy",
+        "garage floor coating",
+        "epoxy floor contractors"
+      ],
+      "notes": "Low competition, decent ticket; growing niche popular with R&R operators."
+    },
+    {
+      "id": "countertops",
+      "name": "Countertop Installation",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        2000,
+        8000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1200
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Granite Countertops",
+        "Quartz Countertops",
+        "Countertop Replacement"
+      ],
+      "seed_keywords": [
+        "countertop installation",
+        "granite countertops",
+        "quartz countertops",
+        "countertop replacement"
+      ],
+      "notes": "Fabricator showrooms compete; leads valued by fabricators."
+    },
+    {
+      "id": "cabinet-refinishing",
+      "name": "Cabinet Refinishing & Refacing",
+      "category": "remodeling",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        2000,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Jan-Apr",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        500,
+        1200
+      ],
+      "per_lead_usd": [
+        40,
+        100
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Cabinet Painting",
+        "Cabinet Refacing",
+        "Cabinet Refinishing"
+      ],
+      "seed_keywords": [
+        "cabinet refinishing",
+        "cabinet refacing",
+        "kitchen cabinet painting"
+      ],
+      "notes": "Lower competition than full remodels."
+    },
+    {
+      "id": "junk-removal",
+      "name": "Junk Removal",
+      "category": "hauling",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 5,
+        "nationwide": 4
+      },
+      "ticket_usd": [
+        150,
+        900
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Spring-summer; month-end moves",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        25,
+        60
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Furniture Removal",
+        "Appliance Removal",
+        "Estate Cleanouts",
+        "Garage Cleanouts",
+        "Construction Debris Removal",
+        "Hot Tub Removal"
+      ],
+      "seed_keywords": [
+        "junk removal",
+        "junk hauling",
+        "trash removal",
+        "furniture removal",
+        "estate cleanout"
+      ],
+      "notes": "Popular R&R niche: easy to rank, many owner-operators; franchises compete in metros."
+    },
+    {
+      "id": "dumpster-rental",
+      "name": "Dumpster Rental",
+      "category": "hauling",
+      "model_fit": {
+        "rank_and_rent": 8,
+        "pay_per_call": 5,
+        "nationwide": 4
+      },
+      "ticket_usd": [
+        300,
+        900
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring-summer",
+      "demand_tier": "B",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Roll-Off Dumpster Rental",
+        "10-40 Yard Dumpsters",
+        "Construction Dumpsters",
+        "Residential Dumpster Rental",
+        "Concrete & Yard Waste Dumpsters"
+      ],
+      "seed_keywords": [
+        "dumpster rental",
+        "roll off dumpster rental",
+        "rent a dumpster",
+        "construction dumpster rental",
+        "dumpster rental prices"
+      ],
+      "notes": "Classic R&R niche, but national dumpster brokers rank city pages everywhere - audit SERPs carefully. Contractor repeat business raises tenant LTV."
+    },
+    {
+      "id": "portable-toilets",
+      "name": "Portable Toilet Rental",
+      "category": "hauling",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 3,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        150,
+        3000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Spring-fall events and construction",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        300,
+        1000
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Construction Porta Potties",
+        "Event Restroom Trailers",
+        "ADA Units",
+        "Hand-Wash Stations"
+      ],
+      "seed_keywords": [
+        "porta potty rental",
+        "portable toilet rental",
+        "restroom trailer rental"
+      ],
+      "notes": "B2B + events; few buyers per metro, low competition."
+    },
+    {
+      "id": "moving",
+      "name": "Local Movers",
+      "category": "hauling",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 6,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        400,
+        3000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "May-Sept",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        15,
+        50
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "high",
+      "geo_tags": [
+        "high_growth"
+      ],
+      "market_profile": "urban",
+      "schema_type": "MovingCompany",
+      "sub_services": [
+        "Local Moving",
+        "Apartment Moving",
+        "Packing Services",
+        "Piano Moving",
+        "Senior Moving",
+        "Storage"
+      ],
+      "seed_keywords": [
+        "movers",
+        "moving company",
+        "local movers",
+        "moving services",
+        "apartment movers"
+      ],
+      "notes": "Scam-prone category; state household-goods permits and FMCSA rules (interstate) apply. Never broker moves without authority."
+    },
+    {
+      "id": "long-distance-moving",
+      "name": "Long-Distance Moving",
+      "category": "hauling",
+      "model_fit": {
+        "rank_and_rent": 2,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        2000,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "May-Sept",
+      "demand_tier": "C",
+      "lsa_presence": "medium",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        30,
+        90
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "MovingCompany",
+      "sub_services": [
+        "Interstate Moving",
+        "Cross-Country Moving",
+        "Auto Shipping Add-On"
+      ],
+      "seed_keywords": [
+        "long distance movers",
+        "cross country movers",
+        "interstate moving companies"
+      ],
+      "notes": "Nationwide PPC only. Brokering interstate moves requires FMCSA broker authority; route calls only to registered carriers/brokers."
+    },
+    {
+      "id": "carpet-cleaning",
+      "name": "Carpet Cleaning",
+      "category": "cleaning",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        100,
+        500
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring and pre-holidays",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        800
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Carpet Cleaning",
+        "Upholstery Cleaning",
+        "Tile & Grout Cleaning",
+        "Pet Stain & Odor Removal"
+      ],
+      "seed_keywords": [
+        "carpet cleaning",
+        "carpet cleaners",
+        "upholstery cleaning",
+        "rug cleaning"
+      ],
+      "notes": "Low ticket; rent is limited."
+    },
+    {
+      "id": "house-cleaning",
+      "name": "House Cleaning & Maid Service",
+      "category": "cleaning",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        120,
+        400
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "B",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Recurring House Cleaning",
+        "Deep Cleaning",
+        "Move-In/Move-Out Cleaning",
+        "Airbnb Turnover Cleaning"
+      ],
+      "seed_keywords": [
+        "house cleaning",
+        "maid service",
+        "cleaning service",
+        "deep cleaning service",
+        "move out cleaning"
+      ],
+      "notes": "Recurring LTV, low ticket; app aggregators compete."
+    },
+    {
+      "id": "commercial-cleaning",
+      "name": "Commercial & Janitorial Cleaning",
+      "category": "cleaning",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        500,
+        10000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        800,
+        2000
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Office Cleaning",
+        "Janitorial Services",
+        "Medical Office Cleaning",
+        "Post-Construction Cleaning"
+      ],
+      "seed_keywords": [
+        "commercial cleaning",
+        "janitorial services",
+        "office cleaning",
+        "commercial cleaning company"
+      ],
+      "notes": "B2B monthly contracts -> very high LTV per lead. Leads are forms more than calls."
+    },
+    {
+      "id": "towing",
+      "name": "Towing & Roadside Assistance",
+      "category": "automotive",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        75,
+        400
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Winter",
+      "demand_tier": "A",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        10,
+        30
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        15,
+        35
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "AutomotiveBusiness",
+      "sub_services": [
+        "Emergency Towing",
+        "Roadside Assistance",
+        "Jump Starts",
+        "Lockouts",
+        "Flatbed Towing",
+        "Heavy-Duty Towing"
+      ],
+      "seed_keywords": [
+        "towing",
+        "tow truck",
+        "towing service",
+        "roadside assistance",
+        "flatbed towing"
+      ],
+      "notes": "Low ticket, high volume; national roadside networks buy calls. Many cities permit/regulate tow operators."
+    },
+    {
+      "id": "auto-glass",
+      "name": "Auto Glass Repair",
+      "category": "automotive",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 6,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        200,
+        1000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Hail season",
+      "demand_tier": "B",
+      "lsa_presence": "medium",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hail_belt"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "AutomotiveBusiness",
+      "sub_services": [
+        "Windshield Replacement",
+        "Windshield Chip Repair",
+        "Mobile Auto Glass",
+        "ADAS Calibration"
+      ],
+      "seed_keywords": [
+        "windshield replacement",
+        "auto glass repair",
+        "windshield repair",
+        "mobile windshield replacement"
+      ],
+      "notes": "National chains dominate; insurance rules vary by state (some require $0-deductible glass coverage)."
+    },
+    {
+      "id": "junk-cars",
+      "name": "Junk Car Buying (Cash for Cars)",
+      "category": "automotive",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        200,
+        2000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Tax season",
+      "demand_tier": "B",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        10,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        90
+      ],
+      "rent_usd_month": [
+        300,
+        800
+      ],
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "AutomotiveBusiness",
+      "sub_services": [
+        "Cash for Junk Cars",
+        "Free Junk Car Removal",
+        "Sell Damaged Car"
+      ],
+      "seed_keywords": [
+        "cash for junk cars",
+        "sell my junk car",
+        "junk car removal",
+        "we buy junk cars"
+      ],
+      "notes": "Title-transfer rules vary by state - don't advise around them."
+    },
+    {
+      "id": "mobile-mechanic",
+      "name": "Mobile Mechanic",
+      "category": "automotive",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 3,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        100,
+        1500
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        300,
+        900
+      ],
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "low",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "AutoRepair",
+      "sub_services": [
+        "Mobile Brake Repair",
+        "Mobile Battery Replacement",
+        "Pre-Purchase Inspections",
+        "Diagnostics"
+      ],
+      "seed_keywords": [
+        "mobile mechanic",
+        "mobile auto repair",
+        "mobile brake repair"
+      ],
+      "notes": "Low competition; buyers are small operators."
+    },
+    {
+      "id": "home-security",
+      "name": "Home Security Systems",
+      "category": "security",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 8,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        300,
+        2500
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Moving season",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        30,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1200
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Security System Installation",
+        "Security Cameras",
+        "Smart Locks",
+        "Alarm Monitoring"
+      ],
+      "seed_keywords": [
+        "home security systems",
+        "security system installation",
+        "security camera installation",
+        "alarm companies"
+      ],
+      "notes": "Nationwide PPC buyers are large; many states license alarm installers."
+    },
+    {
+      "id": "solar",
+      "name": "Solar Installation",
+      "category": "energy",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 8,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        15000,
+        40000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Spring",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        40,
+        150
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        2500
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "medium",
+      "geo_tags": [],
+      "market_profile": "affluent",
+      "schema_type": "HomeAndConstructionBusiness",
+      "sub_services": [
+        "Residential Solar",
+        "Solar Batteries",
+        "Solar Panel Repair",
+        "Commercial Solar"
+      ],
+      "seed_keywords": [
+        "solar panel installation",
+        "solar companies",
+        "solar installers",
+        "home solar"
+      ],
+      "notes": "Heavily regulated and litigated lead-gen vertical (TCPA, state solar consumer-protection laws, incentive claims). Expert operators only; never state incentive amounts without a current official source."
+    },
+    {
+      "id": "commercial-roofing",
+      "name": "Commercial Roofing",
+      "category": "commercial",
+      "model_fit": {
+        "rank_and_rent": 7,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        10000,
+        500000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "After storms",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        1500,
+        4000
+      ],
+      "per_lead_usd": [
+        150,
+        500
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "high",
+      "regulatory_risk": "low",
+      "spam_scrutiny": "low",
+      "geo_tags": [
+        "hail_belt",
+        "hurricane_coast"
+      ],
+      "market_profile": "suburban",
+      "schema_type": "RoofingContractor",
+      "sub_services": [
+        "Flat Roof Repair",
+        "TPO Roofing",
+        "Roof Coatings",
+        "Commercial Roof Replacement"
+      ],
+      "seed_keywords": [
+        "commercial roofing",
+        "commercial roofing contractors",
+        "flat roof repair",
+        "tpo roofing"
+      ],
+      "notes": "Few searches, huge contracts; leads are mostly forms from property managers."
+    },
+    {
+      "id": "personal-injury",
+      "name": "Personal Injury / Auto Accident Lawyer",
+      "category": "legal",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 10,
+        "nationwide": 10
+      },
+      "ticket_usd": [
+        5000,
+        100000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        100,
+        500
+      ],
+      "call_buffer_sec": [
+        90,
+        300
+      ],
+      "rent_usd_month": [
+        2000,
+        10000
+      ],
+      "per_lead_usd": [
+        100,
+        500
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "medium",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LegalService",
+      "sub_services": [
+        "Car Accident Claims",
+        "Truck Accident Claims",
+        "Slip and Fall",
+        "Wrongful Death",
+        "Motorcycle Accidents"
+      ],
+      "seed_keywords": [
+        "personal injury lawyer",
+        "car accident lawyer",
+        "auto accident attorney",
+        "truck accident lawyer"
+      ],
+      "notes": "Highest payouts, hardest SERPs, strict state-bar advertising and referral-fee rules (ABA Model Rule 7.2 variants). Prefer flat-fee advertising arrangements; verify bar rules per state before renting. No guarantees of outcomes."
+    },
+    {
+      "id": "criminal-defense",
+      "name": "Criminal Defense / DUI Lawyer",
+      "category": "legal",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 8,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        2500,
+        25000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Weekends/holidays",
+      "demand_tier": "C",
+      "lsa_presence": "high",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        50,
+        200
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        5000
+      ],
+      "per_lead_usd": [
+        75,
+        250
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LegalService",
+      "sub_services": [
+        "DUI Defense",
+        "Drug Charges",
+        "Assault Charges",
+        "Expungement"
+      ],
+      "seed_keywords": [
+        "dui lawyer",
+        "criminal defense attorney",
+        "dwi attorney",
+        "criminal lawyer"
+      ],
+      "notes": "Same bar-advertising constraints as PI. Never give legal advice in content."
+    },
+    {
+      "id": "bail-bonds",
+      "name": "Bail Bonds",
+      "category": "legal",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        500,
+        10000
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "Weekends",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        30,
+        100
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        2000
+      ],
+      "per_lead_usd": [
+        40,
+        120
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "24-Hour Bail Bonds",
+        "Felony Bail Bonds",
+        "Immigration Bonds",
+        "Jail Release Help"
+      ],
+      "seed_keywords": [
+        "bail bonds",
+        "bail bondsman",
+        "24 hour bail bonds",
+        "bail bonds near me"
+      ],
+      "notes": "Organic-only niche (Google Ads prohibits bail bond ads). Commercial bail is banned or eliminated in some states (e.g. IL, KY, OR, WI) - verify state law; agents must be state-licensed."
+    },
+    {
+      "id": "auto-insurance",
+      "name": "Auto Insurance",
+      "category": "insurance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 7,
+        "nationwide": 9
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "A",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        10,
+        40
+      ],
+      "call_buffer_sec": [
+        60,
+        120
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        10,
+        30
+      ],
+      "buyer_density": "high",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "InsuranceAgency",
+      "sub_services": [
+        "Cheap Auto Insurance",
+        "SR-22 Insurance",
+        "High-Risk Auto Insurance",
+        "Non-Owner Insurance"
+      ],
+      "seed_keywords": [
+        "cheap car insurance",
+        "auto insurance quotes",
+        "sr22 insurance",
+        "car insurance near me"
+      ],
+      "notes": "Nationwide PPC only; comparison giants own SERPs. Content discussing specific rates/coverage may require producer licensing; strict TCPA consent for any outbound contact."
+    },
+    {
+      "id": "medicare",
+      "name": "Medicare Plans",
+      "category": "insurance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 6,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "planned",
+      "seasonality": "highly_seasonal",
+      "peak": "Annual Enrollment Period (Oct 15-Dec 7)",
+      "demand_tier": "B",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        20,
+        80
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        20,
+        60
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "extreme",
+      "spam_scrutiny": "medium",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "InsuranceAgency",
+      "sub_services": [
+        "Medicare Advantage",
+        "Medicare Supplement",
+        "Part D Plans"
+      ],
+      "seed_keywords": [
+        "medicare advantage plans",
+        "medicare supplement plans",
+        "medicare plans"
+      ],
+      "notes": "EXTREME regulation (CMS third-party marketing organization rules, required disclaimers, call recording). Avoid unless counseled."
+    },
+    {
+      "id": "final-expense",
+      "name": "Final Expense Insurance",
+      "category": "insurance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 7,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "InsuranceAgency",
+      "sub_services": [
+        "Burial Insurance",
+        "Final Expense Life Insurance",
+        "Guaranteed Issue Life Insurance"
+      ],
+      "seed_keywords": [
+        "final expense insurance",
+        "burial insurance",
+        "funeral insurance"
+      ],
+      "notes": "Senior audience + insurance regulation. Nationwide PPC only."
+    },
+    {
+      "id": "debt-relief",
+      "name": "Debt Relief",
+      "category": "finance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "Q1",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        30,
+        100
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "FinancialService",
+      "sub_services": [
+        "Debt Settlement",
+        "Credit Card Debt Relief",
+        "Debt Consolidation"
+      ],
+      "seed_keywords": [
+        "debt relief",
+        "debt settlement",
+        "credit card debt relief",
+        "debt consolidation"
+      ],
+      "notes": "FTC Telemarketing Sales Rule + state debt-settlement laws. Never promise results or 'government programs'."
+    },
+    {
+      "id": "tax-relief",
+      "name": "Tax Debt Relief",
+      "category": "finance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "mixed",
+      "seasonality": "seasonal",
+      "peak": "Jan-Apr and IRS notice cycles",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        40,
+        150
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        40,
+        120
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "medium",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "FinancialService",
+      "sub_services": [
+        "IRS Back Taxes",
+        "Offer in Compromise",
+        "Wage Garnishment Help",
+        "Tax Liens"
+      ],
+      "seed_keywords": [
+        "tax relief",
+        "irs tax debt relief",
+        "back taxes help",
+        "offer in compromise"
+      ],
+      "notes": "Heavy FTC enforcement history; no outcome promises."
+    },
+    {
+      "id": "home-warranty",
+      "name": "Home Warranty",
+      "category": "finance",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 6,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Moving season",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        15,
+        40
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "FinancialService",
+      "sub_services": [
+        "Home Warranty Plans",
+        "Appliance Warranty",
+        "HVAC Warranty"
+      ],
+      "seed_keywords": [
+        "home warranty",
+        "best home warranty",
+        "home warranty plans"
+      ],
+      "notes": "Nationwide PPC only; review-site SERPs."
+    },
+    {
+      "id": "medical-alert",
+      "name": "Medical Alert Systems",
+      "category": "health",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 7,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        25,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        20,
+        50
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "low",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Medical Alert Systems",
+        "Fall Detection Devices",
+        "GPS Medical Alerts"
+      ],
+      "seed_keywords": [
+        "medical alert systems",
+        "life alert",
+        "fall detection device",
+        "medical alert for seniors"
+      ],
+      "notes": "Senior audience; avoid trademark misuse (e.g. 'Life Alert' is a brand)."
+    },
+    {
+      "id": "hearing-aids",
+      "name": "Hearing Aids",
+      "category": "health",
+      "model_fit": {
+        "rank_and_rent": 4,
+        "pay_per_call": 6,
+        "nationwide": 7
+      },
+      "ticket_usd": [
+        1000,
+        6000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "medium",
+      "competition_baseline": "medium",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": [
+        500,
+        1500
+      ],
+      "per_lead_usd": [
+        30,
+        80
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "MedicalBusiness",
+      "sub_services": [
+        "Hearing Tests",
+        "Hearing Aid Fitting",
+        "Hearing Aid Repair",
+        "OTC vs Prescription Hearing Aids"
+      ],
+      "seed_keywords": [
+        "hearing aids",
+        "hearing test",
+        "hearing aid center",
+        "audiologist"
+      ],
+      "notes": "Health claims need sourcing; dispensers are state-licensed."
+    },
+    {
+      "id": "dental-implants",
+      "name": "Dental Implants & Emergency Dentist",
+      "category": "health",
+      "model_fit": {
+        "rank_and_rent": 6,
+        "pay_per_call": 6,
+        "nationwide": 5
+      },
+      "ticket_usd": [
+        200,
+        30000
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "B",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        30,
+        150
+      ],
+      "call_buffer_sec": [
+        90,
+        180
+      ],
+      "rent_usd_month": [
+        1000,
+        3000
+      ],
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "medium",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "Dentist",
+      "sub_services": [
+        "Dental Implants",
+        "All-on-4 / Full-Arch",
+        "Emergency Dentist",
+        "Tooth Extraction"
+      ],
+      "seed_keywords": [
+        "dental implants",
+        "emergency dentist",
+        "all on 4 dental implants",
+        "dental implants cost"
+      ],
+      "notes": "Healthcare advertising rules apply; don't collect health details in forms (privacy/HIPAA exposure for the tenant)."
+    },
+    {
+      "id": "addiction-treatment",
+      "name": "Addiction Treatment / Rehab",
+      "category": "health",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 2,
+        "nationwide": 2
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "emergency",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        100,
+        500
+      ],
+      "call_buffer_sec": [
+        120,
+        300
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        100,
+        300
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "extreme",
+      "spam_scrutiny": "high",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "MedicalBusiness",
+      "sub_services": [
+        "Drug Rehab",
+        "Alcohol Rehab",
+        "Detox"
+      ],
+      "seed_keywords": [
+        "drug rehab",
+        "alcohol rehab",
+        "detox centers"
+      ],
+      "notes": "DO NOT PURSUE without specialist counsel: federal EKRA (18 U.S.C. 220) and state patient-brokering laws can make per-referral payments illegal; LegitScript certification needed for ads. Included only so the system can reject it."
+    },
+    {
+      "id": "senior-living",
+      "name": "Senior Living Placement",
+      "category": "health",
+      "model_fit": {
+        "rank_and_rent": 2,
+        "pay_per_call": 5,
+        "nationwide": 6
+      },
+      "ticket_usd": [
+        0,
+        0
+      ],
+      "urgency": "mixed",
+      "seasonality": "year_round",
+      "peak": "None",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        50,
+        200
+      ],
+      "call_buffer_sec": [
+        120,
+        180
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        50,
+        200
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Assisted Living",
+        "Memory Care",
+        "Independent Living"
+      ],
+      "seed_keywords": [
+        "assisted living near me",
+        "memory care facilities",
+        "senior living communities"
+      ],
+      "notes": "Some states regulate placement/referral agencies (registration, disclosures). National referral brands dominate."
+    },
+    {
+      "id": "auto-transport",
+      "name": "Car Shipping / Auto Transport",
+      "category": "automotive",
+      "model_fit": {
+        "rank_and_rent": 0,
+        "pay_per_call": 6,
+        "nationwide": 8
+      },
+      "ticket_usd": [
+        500,
+        2000
+      ],
+      "urgency": "planned",
+      "seasonality": "seasonal",
+      "peak": "Snowbird season (fall/spring)",
+      "demand_tier": "C",
+      "lsa_presence": "low",
+      "directory_pressure": "high",
+      "competition_baseline": "high",
+      "ppc_payout_usd": [
+        20,
+        60
+      ],
+      "call_buffer_sec": [
+        90,
+        120
+      ],
+      "rent_usd_month": null,
+      "per_lead_usd": [
+        15,
+        40
+      ],
+      "buyer_density": "medium",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "urban",
+      "schema_type": "AutomotiveBusiness",
+      "sub_services": [
+        "Open Car Transport",
+        "Enclosed Car Transport",
+        "Snowbird Car Shipping"
+      ],
+      "seed_keywords": [
+        "car shipping",
+        "auto transport",
+        "car transport companies",
+        "ship a car"
+      ],
+      "notes": "FMCSA broker authority required to arrange transport; lead-gen publishers must not act as brokers."
+    },
+    {
+      "id": "asbestos",
+      "name": "Asbestos Testing & Abatement",
+      "category": "restoration",
+      "model_fit": {
+        "rank_and_rent": 5,
+        "pay_per_call": 4,
+        "nationwide": 3
+      },
+      "ticket_usd": [
+        1500,
+        20000
+      ],
+      "urgency": "planned",
+      "seasonality": "year_round",
+      "peak": "Renovation season",
+      "demand_tier": "D",
+      "lsa_presence": "low",
+      "directory_pressure": "low",
+      "competition_baseline": "low",
+      "ppc_payout_usd": null,
+      "call_buffer_sec": null,
+      "rent_usd_month": [
+        600,
+        1500
+      ],
+      "per_lead_usd": [
+        50,
+        150
+      ],
+      "buyer_density": "low",
+      "license_sensitivity": "high",
+      "regulatory_risk": "high",
+      "spam_scrutiny": "low",
+      "geo_tags": [],
+      "market_profile": "suburban",
+      "schema_type": "LocalBusiness",
+      "sub_services": [
+        "Asbestos Testing",
+        "Asbestos Removal",
+        "Popcorn Ceiling Asbestos",
+        "Pre-Demolition Surveys"
+      ],
+      "seed_keywords": [
+        "asbestos removal",
+        "asbestos testing",
+        "asbestos abatement"
+      ],
+      "notes": "State/EPA accreditation required; health content must cite EPA/OSHA. Never give DIY removal instructions."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "brand": "Demo City Tree Service",
+  "base_url": "https://demo-tree-service.invalid",
+  "staging": true,
+  "mode": "lead_gen",
+  "scope": "local",
+  "niche_id": "tree-service",
+  "niche_name": "Tree Service",
+  "primary_city": "Demo City",
+  "state": "OK",
+  "state_name": "Oklahoma",
+  "phone": "(405) 555-0142",
+  "phone_e164": "+14055550142",
+  "email": "",
+  "hours": "",
+  "tagline": "Tree removal, trimming and stump grinding in Demo City and nearby towns",
+  "areas_served": [
+    "Demo City",
+    "Riverside",
+    "Oak Hills",
+    "Cedar Falls",
+    "Mill Creek"
+  ],
+  "services_plan": [],
+  "theme": {
+    "primary": "#166534",
+    "accent": "#f59e0b",
+    "logo_text": ""
+  },
+  "form": {
+    "enabled": true,
+    "action": "https://formspree.io/f/demo",
+    "method": "POST",
+    "consent_text": "By submitting, you agree that {brand} and one matched local provider may contact you at the number provided about your request, including by call or text. Consent is not a condition of purchase. Message and data rates may apply."
+  },
+  "tracking": {
+    "ga4_id": "",
+    "gsc_verification": "",
+    "bing_verification": "",
+    "head_html": ""
+  },
+  "lead_gen": {
+    "disclosure": ""
+  },
+  "tenant": {
+    "legal_name": "",
+    "license": "",
+    "license_label": "License #",
+    "schema_type": "HomeAndConstructionBusiness",
+    "address": {
+      "street": "",
+      "city": "",
+      "region": "OK",
+      "postal": ""
+    },
+    "show_address": false,
+    "gbp_url": "",
+    "same_as": [],
+    "hours": "",
+    "founded": ""
+  },
+  "legal": {
+    "contact_email": "privacy@demo-tree-service.invalid",
+    "effective_date": "2026-10-03"
+  }
+}
