@@ -7,9 +7,16 @@
   "niche_id": null,
   "city": null,
   "state": null,
-  "phase": 1,
-  "status": "niche_research",
-  "verdicts": [],
+  "phase": 2,
+  "status": "gate1_conditional",
+  "verdicts": [
+    {
+      "gate": 1,
+      "verdict": "CONDITIONAL GO",
+      "score": 55,
+      "date": "2026-10-03"
+    }
+  ],
   "domain": null,
   "tenant": null,
   "monthly_revenue": 0,

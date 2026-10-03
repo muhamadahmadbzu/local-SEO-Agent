@@ -7,8 +7,8 @@
 | Market | to be chosen |
 | Monetization model | hybrid |
 | Created | 2026-10-03 |
-| Current phase | 1 — Niche research |
-| Current verdict | — |
+| Current phase | 2 — Market selection (blocked on Gate 1 conditions) |
+| Current verdict | Gate 1 CONDITIONAL GO (55) |
 
 ## Pipeline
 
@@ -17,7 +17,7 @@ until its decision file exists in `decisions/`.
 
 - [x] **Phase 0 — Intake**: operator brief (`brief.md`) — 2026-10-03
 - [x] **Phase 1 — Niche research** (`research/01-niche.md`, `research/05-economics-gate-1.md`) — 2026-10-03
-- [ ] **Gate 1 — Niche shortlist** (`decisions/gate-1-niche.md`)
+- [x] **Gate 1 — Niche shortlist** (CONDITIONAL GO 55, 2026-10-03) (`decisions/gate-1-niche.md`)
 - [ ] **Phase 2 — Market selection** (`research/02-market.md`, `data/cities.md`)
 - [ ] **Gate 2 — Market pick** (`decisions/gate-2-market.md`)
 - [ ] **Phase 3 — Keyword demand** (`research/03-keywords.md`, `data/keywords.csv`)
@@ -38,6 +38,7 @@ until its decision file exists in `decisions/`.
 
 | Date | Gate | Verdict | Key reasons | Kill criteria / conditions |
 |---|---|---|---|---|
+| 2026-10-03 | 1 Niche | CONDITIONAL GO (55/100) | Advance tree service, water damage, drain/sewer; septic as a tenant-first fallback; pest control and HVAC out. Nothing measured; O-1 FATAL (offer access) mitigated, not resolved; compliance 7 CONDITIONAL, 0 BLOCK | Network applications by 2026-10-17 (0 approvals -> stop PPC track, no domain before then); KWP + manual SERP by 2026-10-24 or Gate 2 does not convene; organic #1 below the fold in both cities -> drop niche; volume < ~8 leads/mo -> no Gate 3 |
 
 ## Live numbers (update monthly)
 
