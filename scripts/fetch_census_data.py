@@ -92,7 +92,7 @@ def to_num(val):
         num = float(s)
     except ValueError:
         return None
-    if num < -1:
+    if num <= -100000000:  # ACS jam values (-666666666, -999999999, ...); real negatives (longitudes) are kept
         return None
     return int(num) if num.is_integer() else num
 
@@ -103,15 +103,36 @@ def http_get(url, timeout=120):
         return resp.read()
 
 
-def cached_download(url, filename, refresh=False):
+def cached_download(url, filename, refresh=False, validate=None):
+    """Download once into data/raw/. `validate(bytes)` must succeed before anything is cached,
+    so an error page from the server is never saved and reused."""
     os.makedirs(RAW_DIR, exist_ok=True)
     path = os.path.join(RAW_DIR, filename)
     if os.path.exists(path) and not refresh:
-        return path
+        if validate is None:
+            return path
+        try:
+            with open(path, "rb") as fh:
+                validate(fh.read())
+            return path
+        except Exception:  # noqa: BLE001 - stale/bad cache: re-download
+            os.remove(path)
     data = http_get(url)
+    if validate is not None:
+        validate(data)
     with open(path, "wb") as fh:
         fh.write(data)
     return path
+
+
+def _acs_check(raw):
+    try:
+        rows = json.loads(decode(raw))
+        if not isinstance(rows, list) or not rows or "NAME" not in rows[0]:
+            raise ValueError("unexpected shape")
+    except (ValueError, json.JSONDecodeError):
+        snippet = re.sub(r"\s+", " ", decode(raw[:300]))
+        raise ValueError(f"Census API did not return data: {snippet!r}")
 
 
 def decode(raw_bytes):
@@ -192,14 +213,17 @@ def load_acs(args):
             params["key"] = key
         url = ACS_URL.format(y=y) + "?" + urllib.parse.urlencode(params)
         try:
-            path = cached_download(url, f"acs5_{y}_places.json", args.refresh)
+            path = cached_download(url, f"acs5_{y}_places.json", args.refresh, validate=_acs_check)
             with open(path, "rb") as fh:
                 data = parse_acs(decode(fh.read()))
             print(f"[acs] {y} 5-year: {len(data)} places", file=sys.stderr)
             return data, str(y)
         except (urllib.error.URLError, ValueError, OSError, json.JSONDecodeError) as exc:
             print(f"[acs] {y} unavailable ({exc}); trying older", file=sys.stderr)
-    sys.exit("[acs] could not download ACS data - check network access to api.census.gov")
+    print("[acs] could not download ACS data. The Census API often requires a free key for this request:\n"
+          "      get one at https://api.census.gov/data/key_signup.html, then set CENSUS_API_KEY and re-run.\n"
+          "      Continuing with PEP population + Gazetteer only (no income/housing columns).", file=sys.stderr)
+    return {}, "none"
 
 
 # --------------------------------------------------------------------------- Gazetteer
@@ -248,6 +272,8 @@ def pct(num, den):
 
 def build_rows(pep, acs, gaz, acs_label, min_pop):
     rows = []
+    if not acs:  # PEP-only mode: synthesize minimal ACS records from PEP names
+        acs = {g: {"acs_name": f"{p['pep_name']}, x"} for g, p in pep.items()}
     for geoid, a in acs.items():
         state = STATE_ABBR_BY_FIPS.get(geoid[:2])
         if not state:
