@@ -1,0 +1,25 @@
+# Rebuttals — Gate 1 — ppc-discovery-2026-10
+
+## niche-scout
+Date: 2026-10-03. New evidence comes from WebSearch result snippets only. No offer page was opened, so every item below is OBSERVED-snippet (Low-Med confidence).
+
+| Objection | Response | New evidence (labeled, sourced) / revised estimate / mitigation plan (cost, deadline) |
+|---|---|---|
+| O-1 (FATAL) | **MITIGATE (partial REBUT)** | New evidence: Service Direct runs a public affiliate program that sells calls into its own buyer marketplace, and its listed verticals include plumbing, HVAC, water damage, pest control, mold and towing. Its stated average payout per home-service call is about $40 [OBSERVED-snippet, https://servicedirect.com/pay-per-lead-affiliate-program/ and https://servicedirect.com/resources/best-pay-per-call-networks/, 2026-10-03]. Marketcall lists SEO among its "best converting traffic sources" for pay-per-call [OBSERVED-snippet, https://www.marketcall.com/blog/Alternative-traffic-sources-for-Pay-Per-Call-offers, 2026-10-03]. A third-party roundup says networks may allow SEO but that publishers should get written traffic approval first [OBSERVED-snippet, https://diggitymarketing.com/best-affiliate-programs/pay-per-call/, 2026-10-03]. What this shows: SEO is an accepted traffic class, and at least one home-services network recruits affiliates publicly. What it does not show: whether a zero-history publisher gets approved, or which ZIPs, hours and caps apply. Those stay **UNKNOWN**. Plan: the operator applies to Service Direct, Marketcall and one more network (eLocal or RingPartner). Cost $0. Deadline: approvals or rejections by 2026-10-17, covering approval, SEO allowed, ZIP, hours, buffer, caps and duplicate window. If approvals = 0, convert to tenant-first or direct per-call. I accept this as a hard pre-domain gate. |
+| O-3 (MAJOR) | **CONCEDE** | Counting snippets does not measure accessibility, and I should not have overridden my own rubric with it. Revised approach: one scoring frame. Rubric score [PRIOR+ASSUMPTION] goes first, and offer status is a pass/fail gate from O-1, not a score input. Under that frame septic (3.85) and tree (3.70) lead on rubric. Septic is gated by O-7. HVAC: I keep it **out**. Rankability is 3 [PRIOR], the SERP is LSA-heavy and directory-heavy [PRIOR], and stability is 6. The economist has not shown a SERP path. Its higher Service Direct price band ($65-325 PPL, OBSERVED-snippet, https://servicedirect.com/pay-per-lead-costs/) does not fix rankability. |
+| O-5 (MAJOR) | **CONCEDE + MITIGATE** | No live SERP has been observed. I was not able to take location-set screenshots from this environment, so the LSA, pack and AI Overview share is **UNKNOWN**. Plan: run `serp_audit.py template` for water damage and drain/sewer, 3 queries x 2 candidate cities, mobile with location set. About 30 min per niche, $0. Deadline: before Gate 2 closes. Kill rule set in advance: if organic #1 sits below LSA + 3 ads + pack + AIO on 2 of 3 money queries in both cities, that niche drops to a "cost/guide-intent" long-tail play or exits. Pest control is not tested (see O-8). |
+| O-7 (MAJOR, septic) | **CONCEDE** | No septic pay-per-call buyer has been observed. The Service Direct vertical list in the snippets above does not name septic [OBSERVED-snippet, same URLs]. Septic advances only as a **tenant-first fallback**, not on the PPC track. Test: count map-pack septic operators in candidate cities (observation only, no contact), and ask the 2-3 networks in O-1 whether they buy septic. $0, by 2026-10-17. |
+| O-8 (MAJOR, pest) | **CONCEDE** | I have no evidence for the "South only" exception. Revised estimate: tenant value per lead is $15-27 [economist PRIOR/ASSUMPTION], the SERP is national-brand [PRIOR], and the offer listing says "experience required" [OBSERVED-snippet]. **Pest control does not advance.** It can re-enter only if an O-1 network approves it for SEO and an observed Southern SERP shows less than 50% national-brand share. |
+| O-6 (MINOR, tree) | **CONCEDE** | Published tree ranges are ceilings. For planning I use the low end, $25-55 per billable call [OBSERVED-snippet E-1..E-3]. Qualified job types and the northern Dec-Feb trough are checked in O-1 and O-4. |
+| O-2 (economist-owned) | Note | I support a rerun at $35/$62/$90. My E-5 snippet ($35-90) is the only observed water damage payout, and Service Direct's ~$40 average fits the low end. |
+
+### Revised advance set (3)
+1. **Water damage**: highest observed payout band and SEO named in a snippet. Conditional on the O-1 approval, the O-5 SERP test and an O-12 compliance note.
+2. **Tree service**: most observed offers, and a tenant fallback (R&R #2 prior). Conditional on O-1.
+3. **Drain/sewer**: an urgent plumbing sub-niche with rankability 5 [PRIOR]. Plumbing appears on the Service Direct affiliate list. Conditional on O-1 and O-5.
+- Septic: tenant-first fallback only (O-7). Out: pest control, HVAC.
+- Opportunity cost (red team): foundation repair is the alternate if any of the three fails O-1 or O-5.
+
+## Rulings (devils-advocate / compliance-officer)
+| Objection | Ruling | Reason |
+|---|---|---|
