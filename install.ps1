@@ -13,7 +13,10 @@ param(
     [switch]$Census,
     [switch]$NoClaude
 )
-$ErrorActionPreference = "Stop"
+# "Continue", not "Stop": Windows PowerShell 5.1 treats any stderr output from native programs (python, git) as a
+# terminating error under "Stop", and unittest / git / the Census fetcher all write progress to stderr.
+# Failures are detected explicitly through $LASTEXITCODE instead.
+$ErrorActionPreference = "Continue"
 $RepoUrl = "https://github.com/muhamadahmadbzu/local-SEO-Agent.git"
 
 function Say($m)  { Write-Host "==> $m" -ForegroundColor Green }
@@ -45,10 +48,14 @@ if (Get-Command claude -ErrorAction SilentlyContinue) {
 # ---------------------------------------------------------------- get the code
 if (Test-Path (Join-Path $Dir ".git")) {
     Say "Updating existing install in $Dir"
-    git -C $Dir fetch --quiet origin $Branch
+    git -C $Dir fetch --quiet origin $Branch 2>$null
     $dirty = git -C $Dir status --porcelain -- . ":!projects"
     if ($dirty) { Warn "Local changes found outside projects/ - skipping update." }
-    else { git -C $Dir checkout --quiet $Branch; git -C $Dir pull --quiet --ff-only origin $Branch }
+    else {
+        git -C $Dir checkout --quiet $Branch 2>$null
+        git -C $Dir pull --quiet --ff-only origin $Branch 2>$null
+        if ($LASTEXITCODE -ne 0) { Warn "Could not fast-forward; update manually with git pull." }
+    }
 } elseif (Test-Path $Dir) {
     Die "$Dir exists but is not a git checkout. Use -Dir to pick another folder."
 } else {
@@ -63,17 +70,19 @@ $agents = (Get-ChildItem ".claude\agents\*.md").Count
 $skills = (Get-ChildItem ".claude\skills" -Directory).Count
 Say "Found $agents agents and $skills skills"
 Say "Running self-tests..."
-& $Py -m unittest discover -s tests *> "$env:TEMP\local-seo-agent-tests.log"
+& $Py -m unittest discover -s tests > "$env:TEMP\local-seo-agent-tests.log" 2>&1
 if ($LASTEXITCODE -eq 0) { Say "Tests passed" } else { Warn "Some tests failed - see $env:TEMP\local-seo-agent-tests.log" }
 
 # ---------------------------------------------------------------- optional: global agents & skills (copies; re-run to update)
 if ($Global) {
     $ca = Join-Path $HOME ".claude\agents"; $cs = Join-Path $HOME ".claude\skills"
     New-Item -ItemType Directory -Force -Path $ca, $cs | Out-Null
+    $ErrorActionPreference = "Stop"
     Copy-Item ".claude\agents\*.md" $ca -Force
     Get-ChildItem ".claude\skills" -Directory | ForEach-Object {
         Copy-Item $_.FullName (Join-Path $cs $_.Name) -Recurse -Force
     }
+    $ErrorActionPreference = "Continue"
     Say "Copied agents and skills into $HOME\.claude (re-run this installer to update them)"
     Warn "The helper scripts live in $Dir - start Claude there for project work."
 }
