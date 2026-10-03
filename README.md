@@ -40,9 +40,24 @@ Round 4  VERDICT          ic-chair scores the record -> GO / CONDITIONAL GO / NO
 Every project is a folder in `projects/<slug>/` with its memos, data, decisions, site and ops files, so the team
 can stop and resume at any time.
 
+## Install
+
+**macOS / Linux / WSL**
+```bash
+git clone https://github.com/muhamadahmadbzu/local-SEO-Agent.git && bash local-SEO-Agent/install.sh --global
+```
+**Windows (PowerShell)**
+```powershell
+git clone https://github.com/muhamadahmadbzu/local-SEO-Agent.git; powershell -ExecutionPolicy Bypass -File local-SEO-Agent\install.ps1 -Global
+```
+The installer checks Git, Python 3.9+ and Claude Code (offers to install Claude Code via npm), clones or updates the
+repo into `~/local-SEO-Agent`, runs the self-tests, and with `--global` / `-Global` makes the 14 agents and 11 skills
+available in every Claude Code session. Add `--census` / `-Census` to download official Census city data. Re-run it
+any time to update.
+
 ## Quick start
 
-Requirements: Python 3.9+ (standard library only) and Claude Code. There is nothing to install.
+Requirements: Python 3.9+ (standard library only) and Claude Code.
 
 ```bash
 # in Claude Code, inside this repo
