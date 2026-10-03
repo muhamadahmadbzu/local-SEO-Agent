@@ -90,6 +90,16 @@ class TestCensusParsing(unittest.TestCase):
         self.assertEqual(rows["Suburbia"]["place_type"], "CDP")
         self.assertEqual(rows["Suburbia"]["median_hh_income"], "")  # sentinel -> blank
         self.assertNotIn("Tinytown", rows)          # below min-pop
+        self.assertEqual(rows["Testville"]["lon"], "-95.9")  # negative longitudes must survive
+
+    def test_pep_only_fallback_and_bad_api_response(self):
+        pep = fetch_census_data.parse_pep(read(os.path.join(FIX, "census_pep.csv")))
+        gaz = fetch_census_data.parse_gazetteer(read(os.path.join(FIX, "census_gaz.txt")))
+        rows = fetch_census_data.build_rows(pep, {}, gaz, "none", 1000)
+        self.assertEqual([r["name"] for r in rows], ["Testville"])
+        self.assertEqual(rows[0]["population"], 120500)
+        with self.assertRaises(ValueError):
+            fetch_census_data._acs_check(b"<html>You must provide a key</html>")
 
     def test_clean_names(self):
         self.assertEqual(fetch_census_data.clean_place_name("Tulsa city"), ("Tulsa", "city"))
