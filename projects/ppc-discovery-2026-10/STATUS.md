@@ -16,7 +16,7 @@ The orchestrator (`rank-and-rent` skill) ticks these off and links each artifact
 until its decision file exists in `decisions/`.
 
 - [x] **Phase 0 — Intake**: operator brief (`brief.md`) — 2026-10-03
-- [ ] **Phase 1 — Niche research** (`research/01-niche.md`)
+- [x] **Phase 1 — Niche research** (`research/01-niche.md`, `research/05-economics-gate-1.md`) — 2026-10-03
 - [ ] **Gate 1 — Niche shortlist** (`decisions/gate-1-niche.md`)
 - [ ] **Phase 2 — Market selection** (`research/02-market.md`, `data/cities.md`)
 - [ ] **Gate 2 — Market pick** (`decisions/gate-2-market.md`)
