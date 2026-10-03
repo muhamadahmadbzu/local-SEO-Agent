@@ -1,0 +1,41 @@
+id,niche,score,c_value,c_demand,c_urgency,c_rankability,c_buyers,c_stability,c_risk,c_model_fit,flags,geo_matched,market_rent,ppc_payout
+plumbing,Plumbing,77.4,5.2,10,10,3.0,9.5,9,8.0,10,LSA-HEAVY;DIRECTORY-HEAVY,,800-2500,25-80
+personal-injury,Personal Injury / Auto Accident Lawyer,77.0,10.0,5,10,3.0,9.5,9,4.5,10,REGULATED;LSA-HEAVY;DIRECTORY-HEAVY,,2000-10000,100-500
+hvac,HVAC (AC & Heating),76.6,5.1,10,10,3.0,9.5,6,9.0,10,LSA-HEAVY;DIRECTORY-HEAVY,,800-2500,25-75
+water-damage,Water Damage Restoration,75.0,7.6,5,10,5.0,8.0,9,6.4,10,,,1500-3500,50-200
+water-heater,Water Heater Repair & Installation,73.5,4.9,7.5,10,5.0,8.5,9,9.0,8,LSA-HEAVY,,500-1500,25-70
+drain-sewer,Drain Cleaning & Sewer Repair,73.5,4.9,7.5,10,5.0,8.5,9,9.0,8,LSA-HEAVY,,600-1800,25-70
+fire-damage,Fire & Smoke Damage Restoration,71.6,7.6,2.5,10,7.0,7.0,9,7.4,8,,,800-2500,50-200
+pest-control,Pest Control,71.5,4.9,10,7,4.0,9.0,6,9.0,9,LSA-HEAVY,,500-1500,25-70
+roofing,Roofing,70.2,5.7,10,7,4.0,9.0,6,6.0,9,LSA-HEAVY,,1000-3000,35-90
+biohazard-cleanup,Biohazard & Crime Scene Cleanup,70.1,7.0,2.5,10,9.0,5.0,9,7.4,7,,,800-2000,50-150
+towing,Towing & Roadside Assistance,70.1,2.5,10,10,6.0,8.0,9,7.4,7,SPAM-SCRUTINY;LOW-TICKET,,300-900,10-30
+electrician,Electrician,69.1,4.4,10,7,3.0,8.5,9,9.0,8,LSA-HEAVY;DIRECTORY-HEAVY,,600-1800,20-60
+garage-door,Garage Door Repair,68.8,4.4,7.5,10,3.0,8.5,9,8.0,8,SPAM-SCRUTINY;LSA-HEAVY;DIRECTORY-HEAVY,,500-1500,20-60
+criminal-defense,Criminal Defense / DUI Lawyer,68.3,7.6,5,10,3.0,7.0,9,5.5,8,REGULATED;LSA-HEAVY;DIRECTORY-HEAVY,,1000-5000,50-200
+foundation-repair,Foundation Repair,68.1,6.0,5,7,6.0,7.0,9,9.4,8,,,1000-3000,40-100
+tree-service,Tree Service,66.9,4.6,7.5,7,6.0,8.0,6,9.4,7,,,500-2000,25-60
+basement-waterproofing,Basement Waterproofing,66.6,6.0,5,7,6.0,7.0,6,9.4,8,,,1000-2500,40-100
+septic,Septic Services,66.4,4.9,5,7,9.0,6.0,9,9.4,6,,,500-1500,25-70
+dental-implants,Dental Implants & Emergency Dentist,66.4,6.7,7.5,7,5.0,6.0,9,7.0,6,DIRECTORY-HEAVY,,1000-3000,30-150
+bail-bonds,Bail Bonds,66.3,5.8,5,10,7.0,6.0,9,5.5,6,REGULATED,,500-2000,30-100
+appliance-repair,Appliance Repair,65.3,3.6,7.5,10,5.0,6.0,9,8.0,6,SPAM-SCRUTINY;LSA-HEAVY,,400-1200,15-45
+bed-bugs,Bed Bug Extermination,64.8,5.1,2.5,10,6.0,6.5,9,9.0,7,,,500-1200,30-70
+termite,Termite Control,64.1,5.1,5,7,6.0,7.0,6,9.0,8,,,600-1500,30-70
+junk-cars,Junk Car Buying (Cash for Cars),63.9,3.1,7.5,7,7.0,6.5,9,8.0,7,,,300-800,10-40
+auto-insurance,Auto Insurance,63.7,3.1,10,7,5.0,8.0,9,5.5,7,REGULATED;DIRECTORY-HEAVY,,,10-40
+tax-relief,Tax Debt Relief,63.3,6.8,5,7,6.0,6.5,6,5.9,7,REGULATED,,,40-150
+mold-remediation,Mold Remediation,62.7,5.6,2.5,7,7.0,7.0,9,7.4,8,,,800-2000,30-90
+locksmith,Locksmith,62.7,3.1,10,10,3.0,6.0,9,5.4,6,SPAM-SCRUTINY;LSA-HEAVY;DIRECTORY-HEAVY;LOW-TICKET,,300-1000,10-40
+bathroom-remodeling,Bathroom Remodeling,62.7,6.4,5,4,5.0,7.0,9,9.0,8,DIRECTORY-HEAVY,,1000-2500,40-120
+windows,Window Replacement,62.6,5.6,5,4,6.0,7.0,9,9.4,8,,,800-2000,30-90
+wildlife-removal,Wildlife & Animal Removal,62.5,4.6,2.5,10,8.0,4.5,6,9.4,6,,,500-1500,25-60
+auto-glass,Auto Glass Repair,62.2,3.4,7.5,7,5.0,6.0,9,10.0,6,,,300-900,15-40
+junk-removal,Junk Removal,61.8,3.4,7.5,7,5.0,7.0,9,10.0,5,LSA-HEAVY,,500-1500,15-40
+debt-relief,Debt Relief,61.2,5.8,5,7,5.0,6.5,9,5.9,7,REGULATED;DIRECTORY-HEAVY,,,30-100
+home-security,Home Security Systems,61.1,5.8,5,4,6.0,7.0,9,7.4,8,,,500-1200,30-100
+gutters,Gutter Installation & Gutter Guards,60.9,5.3,5,4,7.0,6.5,6,10.0,7,,,500-1500,30-80
+crawl-space,Crawl Space Repair & Encapsulation,60.9,6.0,2.5,4,9.0,5.0,9,9.4,7,,,800-2000,40-100
+pool-builder,Pool Builder,60.6,7.0,5,4,6.0,6.0,6,9.0,6,,,1000-3000,50-150
+solar,Solar Installation,60.5,6.8,5,4,6.0,7.0,9,4.5,8,REGULATED,,1000-2500,40-150
+senior-living,Senior Living Placement,60.4,7.6,5,7,5.0,4.0,9,5.5,5,REGULATED;DIRECTORY-HEAVY,,,50-200

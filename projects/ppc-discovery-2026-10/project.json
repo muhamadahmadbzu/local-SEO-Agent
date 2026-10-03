@@ -1,0 +1,21 @@
+{
+  "slug": "ppc-discovery-2026-10",
+  "name": "Discovery \u2014 to be chosen",
+  "created": "2026-10-03",
+  "scope": "local",
+  "model": "hybrid",
+  "niche_id": null,
+  "city": null,
+  "state": null,
+  "phase": 1,
+  "status": "niche_research",
+  "verdicts": [],
+  "domain": null,
+  "tenant": null,
+  "monthly_revenue": 0,
+  "live": {
+    "launched": null,
+    "first_lead": null,
+    "rented": null
+  }
+}
